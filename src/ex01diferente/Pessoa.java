@@ -14,13 +14,15 @@ import java.time.temporal.ChronoUnit;
 public class Pessoa {
     private String nome;
     private String bDay;
+    private float altura;
     private Long idadee;
 
     /*construtor da classe Pessoa*/
-    public Pessoa(String nome, String bDay) {
+    public Pessoa(String nome, String bDay, float altura) {
         this.nome = nome;
         this.bDay = bDay;
         this.idadee = calculoIdade(bDay);
+        this.altura=altura;
         }
 
     /*metodo calcula idade*/
@@ -53,11 +55,27 @@ public class Pessoa {
         this.bDay = bDay;
     }
 
+    public float getAltura() {
+        return altura;
+    }
+
+    public void setAltura(float altura) {
+        this.altura = altura;
+    }
+
+    public Long getIdadee() {
+        return idadee;
+    }
+
+    public void setIdadee(Long idadee) {
+        this.idadee = idadee;
+    }
+
     @Override
     public String toString() {
         return "_____________________________________________________\n"+"Pessoa: \n" + "-----------------------------------------------------\n"+
                 "Nome: " + nome +
-                "\nData de Nascimento: '" + bDay + "\nIdade: "+ idadee+"\n\n consulta realizada em: "+
+                "\nData de Nascimento: '" + bDay + "\nIdade: "+ idadee+"\nAltura: "+altura+"m"+"\n\n consulta realizada em: "+
                 LocalDateTime.now() + "\n-----------------------------------------------------\n";
     }
 }
