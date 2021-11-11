@@ -6,7 +6,7 @@
  * possui um construr que implementa o método de cálculo de idade com base na data de nascimento.
  *
  * Uberlândia, 27/10/2021*/
-package ex01diferente;
+package ex01;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.temporal.ChronoUnit;
