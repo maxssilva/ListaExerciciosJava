@@ -1,14 +1,13 @@
 package ex05;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class EntraDados extends Controle {
 
-    super public static int leInteiro(Scanner scan){
-
-
-
+    public static int leInteiro(Scanner scan){
+        return 0;
     }
 
     private ArrayList<Caminhao> frota;
