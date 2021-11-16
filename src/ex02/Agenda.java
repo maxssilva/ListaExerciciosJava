@@ -63,7 +63,7 @@ public class Agenda {
 
 	@Override
 	public String toString() {
-		return agenda + "\n" + " dados utilizados= " + capacidade + "]";
+		return agenda + "\n" + " dados utilizados= " + capacidade;
 	}
 
 }

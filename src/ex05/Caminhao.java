@@ -1,52 +1,67 @@
 package ex05;
-import java.util.ArrayList;
+
 import java.util.Scanner;
 
 public class Caminhao {
+    private String tipo;
+    private int volume;
+    private Caminhao caminhao;
+    Scanner digi = new Scanner(System.in);
+    String tpCaminhao;
 
-    private String tipoCaminhao;
-    private int capacidadeTotal;
-    private String digitado;
-    private ArrayList<Pluviometro> cargaCaminhao;
 
+    public Caminhao(){
+        String digite = digi.nextLine();
+            if (digite.equalsIgnoreCase("alfa")) {
+                setVolume(1000);
+                setTipo("alfa");
+                //frota.add(c);
+                System.out.println("imprime aqui");
 
-    public Caminhao() {
-        Scanner digi = new Scanner(System.in);
+            } else if (digite.equalsIgnoreCase("beta")) {
+                setTipo("beta");
+                setVolume(500);
+                //frota.add(c);
+            } else {
+                System.out.println("opcao digitada incorreta, digite alfa ou beta.");
+                tpCaminhao = digi.nextLine();
+            }
 
-     do{
-         System.out.println("Digite o tipo do caminhão: ALFA ou BETA ");
-        tipoCaminhao = digi.nextLine();
-           }
-     while (tipoCaminhao.equalsIgnoreCase("alfa")==false || !tipoCaminhao.equalsIgnoreCase("Beta")==false);
-
-        System.out.println("Digite a capacidade do caminhão em litros: ");
-        capacidadeTotal = digi.nextInt();
-
-        System.out.println(tipoCaminhao+" "+ capacidadeTotal);}
-
-/*parei aqui!!*/
-
-    public void chamaABagaca(){
-        System.out.println("já é");
-    }
-
-    private void adicionaPluviometro(Pluviometro pluviometro){
-        cargaCaminhao.add(pluviometro);
     }
 
 
-    public String getTipoCaminhao() {
-        return tipoCaminhao;
-    }
-    public void setTipoCaminhao(String tipoCaminhao) {
-        this.tipoCaminhao = tipoCaminhao;
-    }
-    public int getCapacidadeTotal() {
-        return capacidadeTotal;
-    }
-    public void setCapacidadeTotal(int capacidadeTotal) {
-        this.capacidadeTotal = capacidadeTotal;
-    }
 
 
+    public Caminhao getCaminhao() {
+        return caminhao;
+    }
+
+    public void setCaminhao(Caminhao caminhao) {
+        this.caminhao = caminhao;
+    }
+
+    public String getTipo() {
+
+        return "caminhao tipo "+ tipo;
+    }
+
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
+    }
+
+    public int getVolume() {
+        return volume;
+    }
+
+    public void setVolume(int volume) {
+        this.volume = volume;
+    }
+
+    @Override
+    public String toString() {
+        return "Caminhao{" +
+                "tipo='" + tipo + '\'' +
+                ", volume=" + volume +
+                '}';
+    }
 }

@@ -1,10 +1,10 @@
 package ex05;
 
-public class TesteTransportePluviometros extends Caminhao{
+public class TesteTransportePluviometros extends Transportadora {
 
     public static void main(String[] args) {
 
-        Caminhao c1= new Caminhao();
-
+        Transportadora t1 = new Transportadora();
+        t1.adicionaCaminhao();
     }
 }
