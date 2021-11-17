@@ -3,9 +3,6 @@ package ex05;
 import java.util.Scanner;
 
 public class Pluviometro {
-    private String a;
-    private String b;
-    private String c;
     private int capacidade;
     private int volumeDaCarga;
     Scanner digi = new Scanner(System.in);
@@ -45,10 +42,6 @@ public class Pluviometro {
 
     public void setVolumeDaCarga(int volumeDaCarga) {
         this.volumeDaCarga = volumeDaCarga;
-    }
-
-    public int getCapacidade() {
-        return capacidade;
     }
 
     public void setCapacidade(int capacidade) {

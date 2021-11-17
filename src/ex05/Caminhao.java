@@ -5,44 +5,26 @@ import java.util.Scanner;
 public class Caminhao {
     private String tipo;
     private int volume;
-    private Caminhao caminhao;
     Scanner digi = new Scanner(System.in);
     String tpCaminhao;
 
 
-    public Caminhao(){
+    public Caminhao() {
         String digite = digi.nextLine();
-            if (digite.equalsIgnoreCase("alfa")) {
-                setVolume(1000);
-                setTipo("alfa");
-                //frota.add(c);
-                System.out.println("imprime aqui");
-
-            } else if (digite.equalsIgnoreCase("beta")) {
-                setTipo("beta");
-                setVolume(500);
-                //frota.add(c);
-            } else {
-                System.out.println("opcao digitada incorreta, digite alfa ou beta.");
-                tpCaminhao = digi.nextLine();
-            }
-
+        if (digite.equalsIgnoreCase("alfa")) {
+            setVolume(1000);
+            setTipo("alfa");
+        } else if (digite.equalsIgnoreCase("beta")) {
+            setTipo("beta");
+            setVolume(500);
+        } else {
+            System.out.println("opcao digitada incorreta, digite alfa ou beta.");
+            tpCaminhao = digi.nextLine();
+        }
     }
+        public String getTipo() {
 
-
-
-
-    public Caminhao getCaminhao() {
-        return caminhao;
-    }
-
-    public void setCaminhao(Caminhao caminhao) {
-        this.caminhao = caminhao;
-    }
-
-    public String getTipo() {
-
-        return "caminhao tipo "+ tipo;
+        return "caminhao tipo " + tipo;
     }
 
     public void setTipo(String tipo) {

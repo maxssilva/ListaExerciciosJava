@@ -4,20 +4,10 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Transportadora {
-    private Caminhao caminhao;
-    private String dig;
-    private ArrayList<Caminhao> frota = new ArrayList<>();
-    private Pluviometro carga;
+       final ArrayList<Caminhao> frota = new ArrayList<>();
 
-    public Pluviometro getCarga() {
-        return carga;
-    }
 
-    public void setCarga(Pluviometro carga) {
-        this.carga = carga;
-    }
-
-    public void adicionaCaminhao() {
+       public void adicionaCaminhao() {
         Scanner digi = new Scanner(System.in);
         System.out.println("quer adicionar um caminhao?");
         String digite = digi.nextLine();
@@ -37,26 +27,24 @@ public class Transportadora {
                     break;
                 }
                 default: {
-
                     System.out.println("Deseja adicionar OUTRO caminhao?\n digite 's' para sim ou 'n' para não");
                     break;
                 }
             }
-
         }
 
         Pluviometro carga = new Pluviometro();
-        System.out.println(carga.toString());
-        System.out.println(frota.toString());
-
-
-        System.out.println("fim metodo");
+                System.out.println("fim metodo");
         for (int i = 0; i < frota.size(); i++) {
+
             if ((frota.get(i).getVolume() > carga.getVolumeDaCarga())) {
                 System.out.println("o melhor caminhão para o transporte é o " + frota.get(i).getTipo());
             }
 
+           /* Object escolhido= frota.stream().filter(esc -> esc.getVolume()>carga.getVolumeDaCarga());
+            System.out.println(escolhido.toString());*/
+
         }
-    }
+   }
 }
 
