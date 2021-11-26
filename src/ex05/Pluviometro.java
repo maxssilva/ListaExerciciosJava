@@ -8,7 +8,7 @@ public class Pluviometro {
     Scanner digi = new Scanner(System.in);
 
     public Pluviometro() {
-        System.out.println("Digite o tipo de pluviometro: ");
+        System.out.println("Digite o tipo de pluviometro: a, b ou c");
         String letra;
         do {
             letra = digi.nextLine();
@@ -22,7 +22,7 @@ public class Pluviometro {
                 setCapacidade(10);
                 break;
             } else {
-                System.out.println("digite, a, b ou c, paspalho!");
+                System.out.println("opção incorreta, digite, a, b ou c!");
             }
         }
         while (letra.equalsIgnoreCase("a") == false

@@ -9,7 +9,7 @@ public class Transportadora {
 
     public void adicionaCaminhao() {
         Scanner digi = new Scanner(System.in);
-        System.out.println("quer adicionar um caminhao?");
+        System.out.println("quer adicionar um caminhao? digite 's' para sim ou 'n' para não.");
         String digite = digi.nextLine();
 
         for (String a = "n"; a.equalsIgnoreCase(digite) == false; digite = digi.nextLine()) {
