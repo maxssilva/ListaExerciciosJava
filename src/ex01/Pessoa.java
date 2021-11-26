@@ -1,4 +1,5 @@
 package ex01;
+
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.temporal.ChronoUnit;
@@ -14,22 +15,23 @@ public class Pessoa {
         this.nome = nome;
         this.bDay = bDay;
         this.idadee = calculoIdade(bDay);
-        this.altura=altura;
-        }
+        this.altura = altura;
+    }
 
     /*metodo calcula idade*/
-    public Long calculoIdade(String bDay){
+    public Long calculoIdade(String bDay) {
         String[] separaData = bDay.split("-");
-        LocalDate niver = LocalDate.of(Integer.parseInt(separaData[2]), Integer.parseInt(separaData[1]),Integer.parseInt(separaData[0]));
+        LocalDate niver = LocalDate.of(Integer.parseInt(separaData[2]), Integer.parseInt(separaData[1]), Integer.parseInt(separaData[0]));
         LocalDate hoje = LocalDate.now();
-     Long idade = (Long) ChronoUnit.YEARS.between(niver,hoje);
-     return idade;
+        Long idade = (Long) ChronoUnit.YEARS.between(niver, hoje);
+        return idade;
 
       /*----------------------------------------------------------------------------
       alternativa passada pelos insiders
       LocalDate  niver = LocalDate.parse(bDay, DateTimeFormatter.ofPattern("dd/MM/yyy"));
       ---------------------------------------------------------------------------------*/
     }
+
     /*acessores/modificadores*/
     public String getNome() {
         return nome;
@@ -65,9 +67,9 @@ public class Pessoa {
 
     @Override
     public String toString() {
-        return "_____________________________________________________\n"+"Pessoa: \n" + "-----------------------------------------------------\n"+
+        return "_____________________________________________________\n" + "Pessoa: \n" + "-----------------------------------------------------\n" +
                 "Nome: " + nome +
-                "\nData de Nascimento: '" + bDay + "\nIdade: "+ idadee+"\nAltura: "+altura+"m"+"\n\n consulta realizada em: "+
+                "\nData de Nascimento: '" + bDay + "\nIdade: " + idadee + "\nAltura: " + altura + "m" + "\n\n consulta realizada em: " +
                 LocalDateTime.now() + "\n-----------------------------------------------------\n";
     }
 }

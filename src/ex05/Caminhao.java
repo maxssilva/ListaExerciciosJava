@@ -22,7 +22,8 @@ public class Caminhao {
             tpCaminhao = digi.nextLine();
         }
     }
-        public String getTipo() {
+
+    public String getTipo() {
 
         return "caminhao tipo " + tipo;
     }

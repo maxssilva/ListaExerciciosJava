@@ -4,10 +4,10 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Transportadora {
-       final ArrayList<Caminhao> frota = new ArrayList<>();
+    final ArrayList<Caminhao> frota = new ArrayList<>();
 
 
-       public void adicionaCaminhao() {
+    public void adicionaCaminhao() {
         Scanner digi = new Scanner(System.in);
         System.out.println("quer adicionar um caminhao?");
         String digite = digi.nextLine();
@@ -34,7 +34,7 @@ public class Transportadora {
         }
 
         Pluviometro carga = new Pluviometro();
-                System.out.println("fim metodo");
+        System.out.println("fim metodo");
         for (int i = 0; i < frota.size(); i++) {
 
             if ((frota.get(i).getVolume() > carga.getVolumeDaCarga())) {
@@ -45,6 +45,6 @@ public class Transportadora {
             System.out.println(escolhido.toString());*/
 
         }
-   }
+    }
 }
 
