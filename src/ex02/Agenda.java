@@ -4,13 +4,10 @@ import java.util.ArrayList;
 
 public class Agenda {
 	private ArrayList<Pessoa> agenda;
-	int capacidade = 1;
-	String nome;
-	int numero;
-	
+	private int capacidade = 1;
 
 	public Agenda() {
-		agenda = new ArrayList<Pessoa>(10);
+		agenda = new ArrayList<>(10);
 	}
 
 	void addPessoa(Pessoa pessoa) {
@@ -52,7 +49,6 @@ public class Agenda {
 			if(i==numero) {
 				System.out.println(agenda.get(i).toString());
 			}
-			
 		}
 		}
 		else {

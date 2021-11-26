@@ -9,7 +9,7 @@ public class TestaAgenda {
 		Pessoa p2=new Pessoa("lauriane", 35, 1.5f);
 		Pessoa p3=new Pessoa("Valentina", 5, 1.10f);
 		
-
+/*inclusão de pessoas para teste*/
 		 agenda01.addPessoa(p1); agenda01.addPessoa(p2); agenda01.addPessoa(p1);
 		  agenda01.addPessoa(p2); agenda01.addPessoa(p1); agenda01.addPessoa(p2);
 		  agenda01.addPessoa(p3); agenda01.addPessoa(p2); agenda01.addPessoa(p1);
